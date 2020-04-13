@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Reboot, a collection of element-specific CSS changes in a single file, kickstart Melodic to provide an elegant, consistent, and simple baseline to build upon.">
 <meta name="author" content="The Avengers of Inspire, with thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.7.0">
+<meta name="generator" content="Jekyll v3.7.4">
 
 <title>Reboot · Melodic</title>
 
 <!-- Melodic core CSS -->
 
-<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-LktL9d5A4xOdlDHEh1ts0Xrq9sXiyig9x7FkvDfx3KBedW3YS4/hPP1XhLZdEdcb" crossorigin="anonymous">
+<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-4N7clPlkUIr/az6LHLIkf2/qS7d2bMd4WdGmzfS6ug2f7ccnqdpOk2zeX2wDVya3" crossorigin="anonymous">
 
 
 <!-- Documentation extras -->
@@ -96,7 +96,7 @@
     </ul>
   </div>
 
-  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-alpha.zip">Download</a>
+  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-beta.zip">Download</a>
 </header>
 
 
@@ -395,13 +395,11 @@
 
 <h2 id="inspire-font-stack">Inspire font stack</h2>
 
-<p>We supply three font stacks; one for serif fonts, one for sans-serif, and one for monospace fonts. We default to Merriweather, Roboto, and Roboto Mono respectively. Inspired by Bootstrap, we’ve kept the native font stack as a fallback when Roboto is unavailable.</p>
+<p>We supply two font stacks; one for sans-serif fonts and one for monospace fonts. We default to Aeonik and the system monospace font respectively.</p>
 
-<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-family-serif</span><span class="p">:</span> <span class="n">Merriweather</span><span class="o">,</span> <span class="n">Georgia</span><span class="o">,</span> <span class="nb">serif</span> <span class="o">!</span><span class="nb">default</span><span class="err">;</span>
-
-<span class="nv">$font-family-sans-serif</span><span class="p">:</span>
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-family-sans-serif</span><span class="p">:</span>
   <span class="c1">// Inspire default</span>
-  <span class="nt">Roboto</span><span class="o">,</span>
+  <span class="nt">Aeonik</span><span class="o">,</span>
   <span class="c1">// Safari for OS X and iOS (San Francisco)</span>
   <span class="nt">-apple-system</span><span class="o">,</span>
   <span class="c1">// Chrome &lt; 56 for OS X (San Francisco)</span>
@@ -425,7 +423,11 @@
   <span class="s2">"Courier New"</span><span class="o">,</span>
   <span class="nt">monospace</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span></code></pre></figure>
 
-<p>The sans-serif <code class="highlighter-rouge">font-family</code> is applied to the <code class="highlighter-rouge">&lt;body&gt;</code> and automatically inherited globally throughout Melodic. You can override these font stacks by redefining any of these Sass variables in your project.</p>
+<p>The sans-serif <code class="highlighter-rouge">font-family</code> is applied to the <code class="highlighter-rouge">&lt;body&gt;</code> and automatically inherited globally throughout Melodic. You can override these font stacks by redefining any of these Sass variables in your project. For example, if you wanted to add a serif font stack, you could add it this way:</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-family-serif</span><span class="p">:</span> <span class="n">Georgia</span><span class="o">,</span> <span class="nb">serif</span> <span class="o">!</span><span class="nb">default</span><span class="err">;</span></code></pre></figure>
+
+<p>Then you could reference the stack as needed throughout other variables and your SCSS.</p>
 
 <h2 id="headings-and-paragraphs">Headings and paragraphs</h2>
 
@@ -763,6 +765,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-B7PDzSOnhaGManpH+MekU5Qg5XrXpZYznfsEn9JyoeJ8JstHhnJzuMllEflSj/ec" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-irgAptFhVis/c6pGgDC0Y1GrAOTe7Fk7HmxEiVcrmbKeG9bUhGwUxJP+q1MHBHQ4" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
   </body>
 </html>

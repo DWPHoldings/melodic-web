@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentation and examples for adding custom Melodic tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.">
 <meta name="author" content="The Avengers of Inspire, with thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.7.0">
+<meta name="generator" content="Jekyll v3.7.4">
 
 <title>Tooltips · Melodic</title>
 
 <!-- Melodic core CSS -->
 
-<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-LktL9d5A4xOdlDHEh1ts0Xrq9sXiyig9x7FkvDfx3KBedW3YS4/hPP1XhLZdEdcb" crossorigin="anonymous">
+<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-4N7clPlkUIr/az6LHLIkf2/qS7d2bMd4WdGmzfS6ug2f7ccnqdpOk2zeX2wDVya3" crossorigin="anonymous">
 
 
 <!-- Documentation extras -->
@@ -96,7 +96,7 @@
     </ul>
   </div>
 
-  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-alpha.zip">Download</a>
+  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-beta.zip">Download</a>
 </header>
 
 
@@ -401,7 +401,7 @@
 <p>One way to initialize all tooltips on a page would be to select them by their <code class="highlighter-rouge">data-toggle</code> attribute:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="tooltip"]'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">()</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[data-toggle="tooltip"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">()</span>
 <span class="p">})</span></code></pre></figure>
 
 <h2 id="examples">Examples</h2>
@@ -450,7 +450,7 @@
 
 <p>Trigger the tooltip via JavaScript:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#example</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="markup">Markup</h3>
 
@@ -630,49 +630,49 @@
 
 <p>Reveals an element’s tooltip. <strong>Returns to the caller before the tooltip has actually been shown</strong> (i.e. before the <code class="highlighter-rouge">shown.mel.tooltip</code> event occurs). This is considered a “manual” triggering of the tooltip. Tooltips with zero-length titles are never displayed.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tooltiphide"><code class="highlighter-rouge">.tooltip('hide')</code></h4>
 
 <p>Hides an element’s tooltip. <strong>Returns to the caller before the tooltip has actually been hidden</strong> (i.e. before the <code class="highlighter-rouge">hidden.mel.tooltip</code> event occurs). This is considered a “manual” triggering of the tooltip.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">hide</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tooltiptoggle"><code class="highlighter-rouge">.tooltip('toggle')</code></h4>
 
 <p>Toggles an element’s tooltip. <strong>Returns to the caller before the tooltip has actually been shown or hidden</strong> (i.e. before the <code class="highlighter-rouge">shown.mel.tooltip</code> or <code class="highlighter-rouge">hidden.mel.tooltip</code> event occurs). This is considered a “manual” triggering of the tooltip.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">toggle</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tooltipdispose"><code class="highlighter-rouge">.tooltip('dispose')</code></h4>
 
 <p>Hides and destroys an element’s tooltip. Tooltips that use delegation (which are created using <a href="#options">the <code class="highlighter-rouge">selector</code> option</a>) cannot be individually destroyed on descendant trigger elements.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'dispose'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">dispose</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tooltipenable"><code class="highlighter-rouge">.tooltip('enable')</code></h4>
 
 <p>Gives an element’s tooltip the ability to be shown. <strong>Tooltips are enabled by default.</strong></p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'enable'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">enable</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tooltipdisable"><code class="highlighter-rouge">.tooltip('disable')</code></h4>
 
 <p>Removes the ability for an element’s tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'disable'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">disable</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tooltiptoggleenabled"><code class="highlighter-rouge">.tooltip('toggleEnabled')</code></h4>
 
 <p>Toggles the ability for an element’s tooltip to be shown or hidden.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'toggleEnabled'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">toggleEnabled</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tooltipupdate"><code class="highlighter-rouge">.tooltip('update')</code></h4>
 
 <p>Updates the position of an element’s tooltip.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">'update'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#element</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">update</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="events">Events</h3>
 
@@ -707,7 +707,7 @@
   </tbody>
 </table>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTooltip'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.mel.tooltip'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTooltip</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">hidden.mel.tooltip</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span></code></pre></figure>
 
@@ -719,6 +719,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-B7PDzSOnhaGManpH+MekU5Qg5XrXpZYznfsEn9JyoeJ8JstHhnJzuMllEflSj/ec" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-irgAptFhVis/c6pGgDC0Y1GrAOTe7Fk7HmxEiVcrmbKeG9bUhGwUxJP+q1MHBHQ4" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
   </body>
 </html>

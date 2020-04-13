@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Documentation and examples for how to use Melodic’s included navigation components.">
 <meta name="author" content="The Avengers of Inspire, with thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.7.0">
+<meta name="generator" content="Jekyll v3.7.4">
 
 <title>Navs · Melodic</title>
 
 <!-- Melodic core CSS -->
 
-<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-LktL9d5A4xOdlDHEh1ts0Xrq9sXiyig9x7FkvDfx3KBedW3YS4/hPP1XhLZdEdcb" crossorigin="anonymous">
+<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-4N7clPlkUIr/az6LHLIkf2/qS7d2bMd4WdGmzfS6ug2f7ccnqdpOk2zeX2wDVya3" crossorigin="anonymous">
 
 
 <!-- Documentation extras -->
@@ -96,7 +96,7 @@
     </ul>
   </div>
 
-  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-alpha.zip">Download</a>
+  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-beta.zip">Download</a>
 </header>
 
 
@@ -1054,17 +1054,17 @@
 
 <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTab a</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
-  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span>
 <span class="p">})</span></code></pre></figure>
 
 <p>You can activate individual tabs in several ways:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a[href="#profile"]'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select tab by name</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:first-child a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select first tab</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:last-child a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select last tab</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:nth-child(3) a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select third tab</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTab a[href="#profile"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// Select tab by name</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTab li:first-child a</span><span class="dl">'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// Select first tab</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTab li:last-child a</span><span class="dl">'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// Select last tab</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTab li:nth-child(3) a</span><span class="dl">'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// Select third tab</span></code></pre></figure>
 
 <h3 id="fade-effect">Fade effect</h3>
 
@@ -1115,7 +1115,7 @@
 
 <span class="nt">&lt;script&gt;</span>
   <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab li:last-child a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myTab li:last-child a</span><span class="dl">'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
@@ -1123,7 +1123,7 @@
 
 <p>Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. <strong>Returns to the caller before the tab pane has actually been shown</strong> (i.e. before the <code class="highlighter-rouge">shown.mel.tab</code> event occurs).</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#someTab'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#someTab</span><span class="dl">'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="tabdispose">.tab(‘dispose’)</h4>
 
@@ -1169,7 +1169,7 @@
   </tbody>
 </table>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'a[data-toggle="tab"]'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.mel.tab'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">a[data-toggle="tab"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">shown.mel.tab</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// newly activated tab</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous active tab</span>
 <span class="p">})</span></code></pre></figure>
@@ -1182,6 +1182,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-B7PDzSOnhaGManpH+MekU5Qg5XrXpZYznfsEn9JyoeJ8JstHhnJzuMllEflSj/ec" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-irgAptFhVis/c6pGgDC0Y1GrAOTe7Fk7HmxEiVcrmbKeG9bUhGwUxJP+q1MHBHQ4" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
   </body>
 </html>

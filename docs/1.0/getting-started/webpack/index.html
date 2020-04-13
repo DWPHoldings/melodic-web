@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Learn how to include Melodic in your project using Webpack 3.">
 <meta name="author" content="The Avengers of Inspire, with thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.7.0">
+<meta name="generator" content="Jekyll v3.7.4">
 
 <title>Webpack · Melodic</title>
 
 <!-- Melodic core CSS -->
 
-<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-LktL9d5A4xOdlDHEh1ts0Xrq9sXiyig9x7FkvDfx3KBedW3YS4/hPP1XhLZdEdcb" crossorigin="anonymous">
+<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-4N7clPlkUIr/az6LHLIkf2/qS7d2bMd4WdGmzfS6ug2f7ccnqdpOk2zeX2wDVya3" crossorigin="anonymous">
 
 
 <!-- Documentation extras -->
@@ -96,7 +96,7 @@
     </ul>
   </div>
 
-  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-alpha.zip">Download</a>
+  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-beta.zip">Download</a>
 </header>
 
 
@@ -342,7 +342,7 @@
 <li class="toc-entry toc-h2"><a href="#importing-javascript">Importing JavaScript</a></li>
 <li class="toc-entry toc-h2"><a href="#importing-styles">Importing Styles</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#importing-precompiled-sass">Importing Precompiled Sass</a></li>
+<li class="toc-entry toc-h3"><a href="#importing-uncompiled-sass">Importing Uncompiled Sass</a></li>
 <li class="toc-entry toc-h3"><a href="#importing-compiled-css">Importing Compiled CSS</a></li>
 </ul>
 </li>
@@ -365,12 +365,12 @@
 
 <p>Import <a href="/docs/1.0/getting-started/javascript/">Melodic’s JavaScript</a> by adding this line to your app’s entry point (usually <code class="highlighter-rouge">index.js</code> or <code class="highlighter-rouge">app.js</code>):</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'melodic'</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="dl">'</span><span class="s1">@helloinspire/melodic</span><span class="dl">'</span><span class="p">;</span></code></pre></figure>
 
 <p>Alternatively, you may <strong>import plugins individually</strong> as needed:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'melodic/js/dist/util'</span><span class="p">;</span>
-<span class="k">import</span> <span class="s1">'melodic/js/dist/dropdown'</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="dl">'</span><span class="s1">@helloinspire/melodic/js/dist/util</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">@helloinspire/melodic/js/dist/dropdown</span><span class="dl">'</span><span class="p">;</span>
 <span class="p">...</span></code></pre></figure>
 
 <p>Melodic is dependent on <a href="https://jquery.com/">jQuery</a> and <a href="https://popper.js.org/">Popper</a>,
@@ -383,14 +383,14 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
 
 <h2 id="importing-styles">Importing Styles</h2>
 
-<h3 id="importing-precompiled-sass">Importing Precompiled Sass</h3>
+<h3 id="importing-uncompiled-sass">Importing Uncompiled Sass</h3>
 
 <p>To enjoy the full potential of Melodic and customize it to your needs, use the source files as a part of your project’s bundling process.</p>
 
 <p>First, create your own <code class="highlighter-rouge">_custom.scss</code> and use it to override the <a href="/docs/1.0/getting-started/options/">built-in custom variables</a>. Then, use your main sass file to import your custom variables, followed by Melodic:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">"custom"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"~melodic/scss/melodic"</span><span class="p">;</span></code></pre></figure>
+<span class="k">@import</span> <span class="s2">"@helloinspire/melodic/scss/melodic"</span><span class="p">;</span></code></pre></figure>
 
 <p>For Melodic to compile, make sure you install and use the required loaders: <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a>, <a href="https://github.com/postcss/postcss-loader">postcss-loader</a> with <a href="https://github.com/postcss/autoprefixer#webpack">Autoprefixer</a>. With minimal setup, your webpack config should include this rule or similar:</p>
 
@@ -398,21 +398,21 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
   <span class="p">{</span>
     <span class="nl">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">scss</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
     <span class="nx">use</span><span class="p">:</span> <span class="p">[{</span>
-      <span class="na">loader</span><span class="p">:</span> <span class="s1">'style-loader'</span><span class="p">,</span> <span class="c1">// inject CSS to page</span>
+      <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">style-loader</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// inject CSS to page</span>
     <span class="p">},</span> <span class="p">{</span>
-      <span class="na">loader</span><span class="p">:</span> <span class="s1">'css-loader'</span><span class="p">,</span> <span class="c1">// translates CSS into CommonJS modules</span>
+      <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// translates CSS into CommonJS modules</span>
     <span class="p">},</span> <span class="p">{</span>
-      <span class="na">loader</span><span class="p">:</span> <span class="s1">'postcss-loader'</span><span class="p">,</span> <span class="c1">// Run post css actions</span>
+      <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">postcss-loader</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Run post css actions</span>
       <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
         <span class="na">plugins</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// post css plugins, can be exported to postcss.config.js</span>
           <span class="k">return</span> <span class="p">[</span>
-            <span class="nx">require</span><span class="p">(</span><span class="s1">'precss'</span><span class="p">),</span>
-            <span class="nx">require</span><span class="p">(</span><span class="s1">'autoprefixer'</span><span class="p">)</span>
+            <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">precss</span><span class="dl">'</span><span class="p">),</span>
+            <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">autoprefixer</span><span class="dl">'</span><span class="p">)</span>
           <span class="p">];</span>
         <span class="p">}</span>
       <span class="p">}</span>
     <span class="p">},</span> <span class="p">{</span>
-      <span class="na">loader</span><span class="p">:</span> <span class="s1">'sass-loader'</span> <span class="c1">// compiles Sass to CSS</span>
+      <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sass-loader</span><span class="dl">'</span> <span class="c1">// compiles Sass to CSS</span>
     <span class="p">}]</span>
   <span class="p">},</span>
   <span class="p">...</span></code></pre></figure>
@@ -421,7 +421,7 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
 
 <p>Alternatively, you may use Melodic’s ready-to-use css by simply adding this line to your project’s entry point:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'melodic/dist/css/melodic.min.css'</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="dl">'</span><span class="s1">@helloinspire/melodic/dist/css/melodic.min.css</span><span class="dl">'</span><span class="p">;</span></code></pre></figure>
 
 <p>In this case you may use your existing rule for <code class="highlighter-rouge">css</code> without any special modifications to webpack config except you don’t need <code class="highlighter-rouge">sass-loader</code> just <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> and <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
 
@@ -430,7 +430,7 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
     <span class="nl">rules</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
-        <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="s1">'style-loader'</span><span class="p">,</span> <span class="s1">'css-loader'</span><span class="p">]</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">style-loader</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span><span class="p">]</span>
       <span class="p">}</span>
     <span class="p">]</span>
   <span class="p">}</span>
@@ -444,6 +444,6 @@ to your <code class="highlighter-rouge">package.json</code> using <code class="h
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-B7PDzSOnhaGManpH+MekU5Qg5XrXpZYznfsEn9JyoeJ8JstHhnJzuMllEflSj/ec" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-irgAptFhVis/c6pGgDC0Y1GrAOTe7Fk7HmxEiVcrmbKeG9bUhGwUxJP+q1MHBHQ4" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
   </body>
 </html>

@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Use Melodic’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
 <meta name="author" content="The Avengers of Inspire, with thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.7.0">
+<meta name="generator" content="Jekyll v3.7.4">
 
 <title>Modal · Melodic</title>
 
 <!-- Melodic core CSS -->
 
-<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-LktL9d5A4xOdlDHEh1ts0Xrq9sXiyig9x7FkvDfx3KBedW3YS4/hPP1XhLZdEdcb" crossorigin="anonymous">
+<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-4N7clPlkUIr/az6LHLIkf2/qS7d2bMd4WdGmzfS6ug2f7ccnqdpOk2zeX2wDVya3" crossorigin="anonymous">
 
 
 <!-- Documentation extras -->
@@ -96,7 +96,7 @@
     </ul>
   </div>
 
-  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-alpha.zip">Download</a>
+  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-beta.zip">Download</a>
 </header>
 
 
@@ -403,8 +403,8 @@
   <li>Due to how HTML5 defines its semantics, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">the <code class="highlighter-rouge">autofocus</code> HTML attribute</a> has no effect in Melodic modals. To achieve the same effect, use some custom JavaScript:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.mel.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'#myInput'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'focus'</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">shown.mel.modal</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myInput</span><span class="dl">'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="dl">'</span><span class="s1">focus</span><span class="dl">'</span><span class="p">)</span>
 <span class="p">})</span></code></pre></figure>
 
 <p>Keep reading for demos and usage guidelines.</p>
@@ -839,14 +839,14 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#exampleModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.mel.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#exampleModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">show.mel.modal</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span><span class="p">)</span> <span class="c1">// Button that triggered the modal</span>
-  <span class="kd">var</span> <span class="nx">recipient</span> <span class="o">=</span> <span class="nx">button</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">'whatever'</span><span class="p">)</span> <span class="c1">// Extract info from data-* attributes</span>
+  <span class="kd">var</span> <span class="nx">recipient</span> <span class="o">=</span> <span class="nx">button</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="dl">'</span><span class="s1">whatever</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// Extract info from data-* attributes</span>
   <span class="c1">// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).</span>
   <span class="c1">// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.</span>
   <span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
-  <span class="nx">modal</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.modal-title'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s1">'New message to '</span> <span class="o">+</span> <span class="nx">recipient</span><span class="p">)</span>
-  <span class="nx">modal</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.modal-body input'</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">recipient</span><span class="p">)</span>
+  <span class="nx">modal</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="dl">'</span><span class="s1">.modal-title</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">'</span><span class="s1">New message to </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">recipient</span><span class="p">)</span>
+  <span class="nx">modal</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="dl">'</span><span class="s1">.modal-body input</span><span class="dl">'</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">recipient</span><span class="p">)</span>
 <span class="p">})</span></code></pre></figure>
 
 <h3 id="remove-animation">Remove animation</h3>
@@ -947,7 +947,7 @@
 
 <p>Call a modal with id <code class="highlighter-rouge">myModal</code> with a single line of JavaScript:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre></figure>
 
 <h3 id="options">Options</h3>
 
@@ -1004,7 +1004,7 @@
 
 <p>Activates your content as a modal. Accepts an optional options <code class="highlighter-rouge">object</code>.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span>
   <span class="na">keyboard</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">})</span></code></pre></figure>
 
@@ -1012,25 +1012,25 @@
 
 <p>Manually toggles a modal. <strong>Returns to the caller before the modal has actually been shown or hidden</strong> (i.e. before the <code class="highlighter-rouge">shown.mel.modal</code> or <code class="highlighter-rouge">hidden.mel.modal</code> event occurs).</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">toggle</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="modalshow"><code class="highlighter-rouge">.modal('show')</code></h4>
 
 <p>Manually opens a modal. <strong>Returns to the caller before the modal has actually been shown</strong> (i.e. before the <code class="highlighter-rouge">shown.mel.modal</code> event occurs).</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">show</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="modalhide"><code class="highlighter-rouge">.modal('hide')</code></h4>
 
 <p>Manually hides a modal. <strong>Returns to the caller before the modal has actually been hidden</strong> (i.e. before the <code class="highlighter-rouge">hidden.mel.modal</code> event occurs).</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">hide</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="modalhandleupdate"><code class="highlighter-rouge">.modal('handleUpdate')</code></h4>
 
 <p>Manually readjust the modal’s position if the height of a modal changes while it is open (i.e. in case a scrollbar appears).</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'handleUpdate'</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="dl">'</span><span class="s1">handleUpdate</span><span class="dl">'</span><span class="p">)</span></code></pre></figure>
 
 <h4 id="modaldispose"><code class="highlighter-rouge">.modal('dispose')</code></h4>
 
@@ -1067,7 +1067,7 @@
   </tbody>
 </table>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.mel.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">hidden.mel.modal</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// do something...</span>
 <span class="p">})</span></code></pre></figure>
 
@@ -1079,6 +1079,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-B7PDzSOnhaGManpH+MekU5Qg5XrXpZYznfsEn9JyoeJ8JstHhnJzuMllEflSj/ec" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-irgAptFhVis/c6pGgDC0Y1GrAOTe7Fk7HmxEiVcrmbKeG9bUhGwUxJP+q1MHBHQ4" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
   </body>
 </html>
