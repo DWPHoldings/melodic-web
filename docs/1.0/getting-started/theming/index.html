@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Customize Melodic with our built-in Sass variables setting global style preferences for easy theming and component changes.">
 <meta name="author" content="The Avengers of Inspire, with thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Jekyll v3.7.0">
+<meta name="generator" content="Jekyll v3.7.4">
 
 <title>Theming Melodic · Melodic</title>
 
 <!-- Melodic core CSS -->
 
-<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-LktL9d5A4xOdlDHEh1ts0Xrq9sXiyig9x7FkvDfx3KBedW3YS4/hPP1XhLZdEdcb" crossorigin="anonymous">
+<link href="/dist/css/melodic.min.css" rel="stylesheet" integrity="sha384-4N7clPlkUIr/az6LHLIkf2/qS7d2bMd4WdGmzfS6ug2f7ccnqdpOk2zeX2wDVya3" crossorigin="anonymous">
 
 
 <!-- Documentation extras -->
@@ -96,7 +96,7 @@
     </ul>
   </div>
 
-  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-alpha.zip">Download</a>
+  <a class="btn btn-outline-dark d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-beta.zip">Download</a>
 </header>
 
 
@@ -517,7 +517,7 @@
   <span class="nl">background-color</span><span class="p">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>We also have another function for getting a particular <em>level</em> of color from the <code class="highlighter-rouge">$theme-colors</code> map. Negative level values will lighten the color, while higher levels will darken.</p>
+<p>We also have another function for getting a particular <em>level</em> of color from the <code class="highlighter-rouge">$theme-colors</code> map. Negative level values will lighten the color, while higher levels will darken. With a <code class="highlighter-rouge">$theme-color-interval</code> value less than 10%, you can request a color level of <code class="highlighter-rouge">10</code> or <code class="highlighter-rouge">-10</code>; at a value of 10% or higher, those color levels will return <code class="highlighter-rouge">black</code> and <code class="highlighter-rouge">white</code> colors respectively.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@function</span> <span class="nf">theme-color-level</span><span class="p">(</span><span class="nv">$color-name</span><span class="o">:</span> <span class="s2">"primary"</span><span class="o">,</span> <span class="nv">$level</span><span class="o">:</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
   <span class="nv">$color</span><span class="p">:</span> <span class="nf">theme-color</span><span class="p">(</span><span class="nv">$color-name</span><span class="p">);</span>
@@ -526,6 +526,83 @@
 
   <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color-base</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$level</span> <span class="o">*</span> <span class="nv">$theme-color-interval</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
+
+<p>Here are some examples using Inspire’s primary brand colors:</p>
+<div class="row">
+  
+    <div class="col-md-2 mb-3">
+      <div class="p-2 brand-swatch-rosewood-shade-80">Black +80</div>
+      <div class="p-2 brand-swatch-rosewood-shade-60">Black +60</div>
+      <div class="p-2 brand-swatch-rosewood-shade-40">Black +40</div>
+      <div class="p-2 brand-swatch-rosewood-shade-20">Black +20</div>
+      <div class="px-2 py-3 brand-swatch-rosewood"><strong>Rosewood</strong></div>
+      <div class="p-2 brand-swatch-rosewood-tint-20">White +20</div>
+      <div class="p-2 brand-swatch-rosewood-tint-40">White +40</div>
+      <div class="p-2 brand-swatch-rosewood-tint-60">White +60</div>
+      <div class="p-2 brand-swatch-rosewood-tint-80">White +80</div>
+    </div>
+  
+    <div class="col-md-2 mb-3">
+      <div class="p-2 brand-swatch-sand-shade-80">Black +80</div>
+      <div class="p-2 brand-swatch-sand-shade-60">Black +60</div>
+      <div class="p-2 brand-swatch-sand-shade-40">Black +40</div>
+      <div class="p-2 brand-swatch-sand-shade-20">Black +20</div>
+      <div class="px-2 py-3 brand-swatch-sand"><strong>Sand</strong></div>
+      <div class="p-2 brand-swatch-sand-tint-20">White +20</div>
+      <div class="p-2 brand-swatch-sand-tint-40">White +40</div>
+      <div class="p-2 brand-swatch-sand-tint-60">White +60</div>
+      <div class="p-2 brand-swatch-sand-tint-80">White +80</div>
+    </div>
+  
+    <div class="col-md-2 mb-3">
+      <div class="p-2 brand-swatch-cosmos-shade-80">Black +80</div>
+      <div class="p-2 brand-swatch-cosmos-shade-60">Black +60</div>
+      <div class="p-2 brand-swatch-cosmos-shade-40">Black +40</div>
+      <div class="p-2 brand-swatch-cosmos-shade-20">Black +20</div>
+      <div class="px-2 py-3 brand-swatch-cosmos"><strong>Cosmos</strong></div>
+      <div class="p-2 brand-swatch-cosmos-tint-20">White +20</div>
+      <div class="p-2 brand-swatch-cosmos-tint-40">White +40</div>
+      <div class="p-2 brand-swatch-cosmos-tint-60">White +60</div>
+      <div class="p-2 brand-swatch-cosmos-tint-80">White +80</div>
+    </div>
+  
+    <div class="col-md-2 mb-3">
+      <div class="p-2 brand-swatch-malachite-shade-80">Black +80</div>
+      <div class="p-2 brand-swatch-malachite-shade-60">Black +60</div>
+      <div class="p-2 brand-swatch-malachite-shade-40">Black +40</div>
+      <div class="p-2 brand-swatch-malachite-shade-20">Black +20</div>
+      <div class="px-2 py-3 brand-swatch-malachite"><strong>Malachite</strong></div>
+      <div class="p-2 brand-swatch-malachite-tint-20">White +20</div>
+      <div class="p-2 brand-swatch-malachite-tint-40">White +40</div>
+      <div class="p-2 brand-swatch-malachite-tint-60">White +60</div>
+      <div class="p-2 brand-swatch-malachite-tint-80">White +80</div>
+    </div>
+  
+    <div class="col-md-2 mb-3">
+      <div class="p-2 brand-swatch-pacific-shade-80">Black +80</div>
+      <div class="p-2 brand-swatch-pacific-shade-60">Black +60</div>
+      <div class="p-2 brand-swatch-pacific-shade-40">Black +40</div>
+      <div class="p-2 brand-swatch-pacific-shade-20">Black +20</div>
+      <div class="px-2 py-3 brand-swatch-pacific"><strong>Pacific</strong></div>
+      <div class="p-2 brand-swatch-pacific-tint-20">White +20</div>
+      <div class="p-2 brand-swatch-pacific-tint-40">White +40</div>
+      <div class="p-2 brand-swatch-pacific-tint-60">White +60</div>
+      <div class="p-2 brand-swatch-pacific-tint-80">White +80</div>
+    </div>
+  
+    <div class="col-md-2 mb-3">
+      <div class="p-2 brand-swatch-harvest-shade-80">Black +80</div>
+      <div class="p-2 brand-swatch-harvest-shade-60">Black +60</div>
+      <div class="p-2 brand-swatch-harvest-shade-40">Black +40</div>
+      <div class="p-2 brand-swatch-harvest-shade-20">Black +20</div>
+      <div class="px-2 py-3 brand-swatch-harvest"><strong>Harvest</strong></div>
+      <div class="p-2 brand-swatch-harvest-tint-20">White +20</div>
+      <div class="p-2 brand-swatch-harvest-tint-40">White +40</div>
+      <div class="p-2 brand-swatch-harvest-tint-60">White +60</div>
+      <div class="p-2 brand-swatch-harvest-tint-80">White +80</div>
+    </div>
+  
+</div>
 
 <p>In practice, you’d call the function and pass in two parameters: the name of the color from <code class="highlighter-rouge">$theme-colors</code> (e.g., primary or danger) and a numeric level.</p>
 
@@ -537,7 +614,7 @@
 
 <h3 id="color-contrast">Color contrast</h3>
 
-<p>One additional function we include in Melodic is the color contrast function, <code class="highlighter-rouge">color-yiq</code>. It utilizes the <a href="https://en.wikipedia.org/wiki/YIQ">YIQ color space</a> to automatically return a light (<code class="highlighter-rouge">#fff</code>) or dark (<code class="highlighter-rouge">#111</code>) contrast color based on the specified base color. This function is especially useful for mixins or loops where you’re generating multiple classes.</p>
+<p>One additional function we include in Melodic is the color contrast function, <code class="highlighter-rouge">color-yiq</code>. It utilizes the <a href="https://en.wikipedia.org/wiki/YIQ">YIQ color space</a> to automatically return a light (<code class="highlighter-rouge">#fff</code>) or dark (<code class="highlighter-rouge">#1b1b1b</code>) contrast color based on the specified base color. This function is especially useful for mixins or loops where you’re generating multiple classes.</p>
 
 <p>For example, to generate color swatches from our <code class="highlighter-rouge">$theme-colors</code> map:</p>
 
@@ -630,128 +707,108 @@
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-blue">Blue</div>
+      <div class="p-3 mb-3 swatch-blue-violet">Blue-violet</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-mariner">Mariner</div>
+      <div class="p-3 mb-3 swatch-indigo">Indigo</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-blue-violet">Blue-violet</div>
+      <div class="p-3 mb-3 swatch-purple">Purple</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-indigo">Indigo</div>
+      <div class="p-3 mb-3 swatch-rosewood">Rosewood</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-purple">Purple</div>
+      <div class="p-3 mb-3 swatch-red">Red</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-brilliant-rose">Brilliant-rose</div>
+      <div class="p-3 mb-3 swatch-orange">Orange</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-fuschia">Fuschia</div>
+      <div class="p-3 mb-3 swatch-harvest">Harvest</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-red">Red</div>
+      <div class="p-3 mb-3 swatch-sand">Sand</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-orange">Orange</div>
+      <div class="p-3 mb-3 swatch-yellow">Yellow</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-tangerine">Tangerine</div>
+      <div class="p-3 mb-3 swatch-mango">Mango</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-yellow">Yellow</div>
+      <div class="p-3 mb-3 swatch-vis-vis">Vis-vis</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-mango">Mango</div>
+      <div class="p-3 mb-3 swatch-malachite">Malachite</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-vis-vis">Vis-vis</div>
+      <div class="p-3 mb-3 swatch-green">Green</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-green">Green</div>
+      <div class="p-3 mb-3 swatch-teal">Teal</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-ice-cold">Ice-cold</div>
+      <div class="p-3 mb-3 swatch-pacific">Pacific</div>
     </div>
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-aquamarine">Aquamarine</div>
+      <div class="p-3 mb-3 swatch-cyan">Cyan</div>
     </div>
+    
+  
+    
+  
     
   
     
     <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-teal">Teal</div>
+      <div class="p-3 mb-3 swatch-cosmos">Cosmos</div>
     </div>
-    
-  
-    
-    <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-anakiwa">Anakiwa</div>
-    </div>
-    
-  
-    
-    <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-pelorous">Pelorous</div>
-    </div>
-    
-  
-    
-    <div class="col-md-4">
-        <div class="p-3 mb-3 swatch-cyan">Cyan</div>
-    </div>
-    
-  
-    
-  
-    
-  
     
   
 </div>
@@ -841,28 +898,27 @@
 <p>Within <code class="highlighter-rouge">_variables.scss</code>, you’ll find our color variables and Sass map. Here’s an example of the <code class="highlighter-rouge">$colors</code> Sass map:</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$colors</span><span class="p">:</span> <span class="p">(</span>
-  <span class="s2">"blue"</span><span class="o">:</span>           <span class="nv">$blue</span><span class="o">,</span>
-  <span class="s2">"mariner"</span><span class="o">:</span>        <span class="nv">$mariner</span><span class="o">,</span>
-  <span class="s2">"blue-violet"</span><span class="o">:</span>    <span class="nv">$blue-violet</span><span class="o">,</span>
-  <span class="s2">"indigo"</span><span class="o">:</span>         <span class="nv">$indigo</span><span class="o">,</span>
-  <span class="s2">"purple"</span><span class="o">:</span>         <span class="nv">$purple</span><span class="o">,</span>
-  <span class="s2">"brilliant-rose"</span><span class="o">:</span> <span class="nv">$brilliant-rose</span><span class="o">,</span>
-  <span class="s2">"fuschia"</span><span class="o">:</span>        <span class="nv">$fuschia</span><span class="o">,</span>
-  <span class="s2">"red"</span><span class="o">:</span>            <span class="nv">$red</span><span class="o">,</span>
-  <span class="s2">"orange"</span><span class="o">:</span>         <span class="nv">$orange</span><span class="o">,</span>
-  <span class="s2">"tangerine"</span><span class="o">:</span>      <span class="nv">$tangerine</span><span class="o">,</span>
-  <span class="s2">"yellow"</span><span class="o">:</span>         <span class="nv">$yellow</span><span class="o">,</span>
-  <span class="s2">"vis-vis"</span><span class="o">:</span>        <span class="nv">$vis-vis</span><span class="o">,</span>
-  <span class="s2">"green"</span><span class="o">:</span>          <span class="nv">$green</span><span class="o">,</span>
-  <span class="s2">"ice-cold"</span><span class="o">:</span>       <span class="nv">$ice-cold</span><span class="o">,</span>
-  <span class="s2">"aquamarine"</span><span class="o">:</span>     <span class="nv">$aquamarine</span><span class="o">,</span>
-  <span class="s2">"teal"</span><span class="o">:</span>           <span class="nv">$teal</span><span class="o">,</span>
-  <span class="s2">"anakiwa"</span><span class="o">:</span>        <span class="nv">$anakiwa</span><span class="o">,</span>
-  <span class="s2">"pelorous"</span><span class="o">:</span>       <span class="nv">$pelorous</span><span class="o">,</span>
-  <span class="s2">"cyan"</span><span class="o">:</span>           <span class="nv">$cyan</span><span class="o">,</span>
-  <span class="s2">"white"</span><span class="o">:</span>          <span class="nv">$white</span><span class="o">,</span>
-  <span class="s2">"gray"</span><span class="o">:</span>           <span class="nv">$gray-600</span><span class="o">,</span>
-  <span class="s2">"gray-dark"</span><span class="o">:</span>      <span class="nv">$gray-800</span>
+  <span class="s2">"blue-violet"</span><span class="o">:</span>  <span class="nv">$blue-violet</span><span class="o">,</span>
+  <span class="s2">"indigo"</span><span class="o">:</span>  <span class="nv">$indigo</span><span class="o">,</span>
+  <span class="s2">"purple"</span><span class="o">:</span>  <span class="nv">$purple</span><span class="o">,</span>
+  <span class="s2">"rosewood"</span><span class="o">:</span>  <span class="nv">$rosewood</span><span class="o">,</span>
+  <span class="s2">"red"</span><span class="o">:</span>  <span class="nv">$red</span><span class="o">,</span>
+  <span class="s2">"orange"</span><span class="o">:</span>  <span class="nv">$orange</span><span class="o">,</span>
+  <span class="s2">"harvest"</span><span class="o">:</span>  <span class="nv">$harvest</span><span class="o">,</span>
+  <span class="s2">"sand"</span><span class="o">:</span>  <span class="nv">$sand</span><span class="o">,</span>
+  <span class="s2">"yellow"</span><span class="o">:</span>  <span class="nv">$yellow</span><span class="o">,</span>
+  <span class="s2">"mango"</span><span class="o">:</span>  <span class="nv">$mango</span><span class="o">,</span>
+  <span class="s2">"vis-vis"</span><span class="o">:</span>  <span class="nv">$vis-vis</span><span class="o">,</span>
+  <span class="s2">"malachite"</span><span class="o">:</span>  <span class="nv">$malachite</span><span class="o">,</span>
+  <span class="s2">"green"</span><span class="o">:</span>  <span class="nv">$green</span><span class="o">,</span>
+  <span class="s2">"teal"</span><span class="o">:</span>  <span class="nv">$teal</span><span class="o">,</span>
+  <span class="s2">"pacific"</span><span class="o">:</span>  <span class="nv">$pacific</span><span class="o">,</span>
+  <span class="s2">"anakiwa"</span><span class="o">:</span>  <span class="nv">$anakiwa</span><span class="o">,</span>
+  <span class="s2">"pelorous"</span><span class="o">:</span>  <span class="nv">$pelorous</span><span class="o">,</span>
+  <span class="s2">"cyan"</span><span class="o">:</span>  <span class="nv">$cyan</span><span class="o">,</span>
+  <span class="s2">"white"</span><span class="o">:</span>  <span class="nv">$white</span><span class="o">,</span>
+  <span class="s2">"gray"</span><span class="o">:</span>  <span class="nv">$gray</span><span class="o">,</span>
+  <span class="s2">"cosmos"</span><span class="o">:</span>  <span class="nv">$cosmos</span>
 <span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></figure>
 
 <p>Add, remove, or modify values within the map to update how they’re used in many other components. Unfortunately at this time, not <em>every</em> component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the <code class="highlighter-rouge">${color}</code> variables and this Sass map.</p>
@@ -914,43 +970,41 @@
 <p>Here are the variables we include (note that the <code class="highlighter-rouge">:root</code> is required). They’re located in our <code class="highlighter-rouge">_root.scss</code> file.</p>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:root</span> <span class="p">{</span>
-  <span class="py">--blue</span><span class="p">:</span> <span class="m">#007bff</span><span class="p">;</span>
-  <span class="py">--mariner</span><span class="p">:</span> <span class="m">#3b71d6</span><span class="p">;</span>
   <span class="py">--blue-violet</span><span class="p">:</span> <span class="m">#5147ad</span><span class="p">;</span>
   <span class="py">--indigo</span><span class="p">:</span> <span class="m">#6610f2</span><span class="p">;</span>
   <span class="py">--purple</span><span class="p">:</span> <span class="m">#6f42c1</span><span class="p">;</span>
-  <span class="py">--brilliant-rose</span><span class="p">:</span> <span class="m">#ef5fb0</span><span class="p">;</span>
-  <span class="py">--fuschia</span><span class="p">:</span> <span class="m">#e6168b</span><span class="p">;</span>
+  <span class="py">--rosewood</span><span class="p">:</span> <span class="m">#cf126d</span><span class="p">;</span>
   <span class="py">--red</span><span class="p">:</span> <span class="m">#dc3545</span><span class="p">;</span>
   <span class="py">--orange</span><span class="p">:</span> <span class="m">#fd7e14</span><span class="p">;</span>
-  <span class="py">--tangerine</span><span class="p">:</span> <span class="m">#ffaa67</span><span class="p">;</span>
+  <span class="py">--harvest</span><span class="p">:</span> <span class="m">#ffa867</span><span class="p">;</span>
+  <span class="py">--sand</span><span class="p">:</span> <span class="m">#efdbcb</span><span class="p">;</span>
   <span class="py">--yellow</span><span class="p">:</span> <span class="m">#ffc107</span><span class="p">;</span>
+  <span class="py">--mango</span><span class="p">:</span> <span class="m">#f8cc1c</span><span class="p">;</span>
   <span class="py">--vis-vis</span><span class="p">:</span> <span class="m">#fff5a5</span><span class="p">;</span>
+  <span class="py">--malachite</span><span class="p">:</span> <span class="m">#00524d</span><span class="p">;</span>
   <span class="py">--green</span><span class="p">:</span> <span class="m">#28a745</span><span class="p">;</span>
-  <span class="py">--ice-cold</span><span class="p">:</span> <span class="m">#a8f8e3</span><span class="p">;</span>
-  <span class="py">--aquamarine</span><span class="p">:</span> <span class="m">#50e3ae</span><span class="p">;</span>
   <span class="py">--teal</span><span class="p">:</span> <span class="m">#20c997</span><span class="p">;</span>
+  <span class="py">--pacific</span><span class="p">:</span> <span class="m">#2b6ca3</span><span class="p">;</span>
   <span class="py">--anakiwa</span><span class="p">:</span> <span class="m">#87dffc</span><span class="p">;</span>
   <span class="py">--pelorous</span><span class="p">:</span> <span class="m">#41b3c6</span><span class="p">;</span>
   <span class="py">--cyan</span><span class="p">:</span> <span class="m">#17a2b8</span><span class="p">;</span>
   <span class="py">--white</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
-  <span class="py">--gray</span><span class="p">:</span> <span class="m">#6c757d</span><span class="p">;</span>
-  <span class="py">--gray-dark</span><span class="p">:</span> <span class="m">#343a40</span><span class="p">;</span>
-  <span class="py">--primary</span><span class="p">:</span> <span class="m">#e6168b</span><span class="p">;</span>
+  <span class="py">--gray</span><span class="p">:</span> <span class="m">#868e96</span><span class="p">;</span>
+  <span class="py">--cosmos</span><span class="p">:</span> <span class="m">#1b1b1b</span><span class="p">;</span>
+  <span class="py">--primary</span><span class="p">:</span> <span class="m">#cf126d</span><span class="p">;</span>
   <span class="py">--secondary</span><span class="p">:</span> <span class="m">#6c757d</span><span class="p">;</span>
-  <span class="py">--success</span><span class="p">:</span> <span class="m">#28a745</span><span class="p">;</span>
-  <span class="py">--info</span><span class="p">:</span> <span class="m">#17a2b8</span><span class="p">;</span>
-  <span class="py">--warning</span><span class="p">:</span> <span class="m">#ffc107</span><span class="p">;</span>
+  <span class="py">--success</span><span class="p">:</span> <span class="m">#00524d</span><span class="p">;</span>
   <span class="py">--danger</span><span class="p">:</span> <span class="m">#dc3545</span><span class="p">;</span>
+  <span class="py">--warning</span><span class="p">:</span> <span class="m">#ffa867</span><span class="p">;</span>
+  <span class="py">--info</span><span class="p">:</span> <span class="m">#2b6ca3</span><span class="p">;</span>
   <span class="py">--light</span><span class="p">:</span> <span class="m">#f8f9fa</span><span class="p">;</span>
-  <span class="py">--dark</span><span class="p">:</span> <span class="m">#343a40</span><span class="p">;</span>
+  <span class="py">--dark</span><span class="p">:</span> <span class="m">#1b1b1b</span><span class="p">;</span>
   <span class="py">--breakpoint-xs</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="py">--breakpoint-sm</span><span class="p">:</span> <span class="m">576px</span><span class="p">;</span>
   <span class="py">--breakpoint-md</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
   <span class="py">--breakpoint-lg</span><span class="p">:</span> <span class="m">992px</span><span class="p">;</span>
   <span class="py">--breakpoint-xl</span><span class="p">:</span> <span class="m">1200px</span><span class="p">;</span>
-  <span class="py">--font-family-serif</span><span class="p">:</span> <span class="n">Merriweather</span><span class="p">,</span> <span class="n">Georgia</span><span class="p">,</span> <span class="nb">serif</span><span class="p">;</span>
-  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">Roboto</span><span class="p">,</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">;</span>
+  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">Aeonik</span><span class="p">,</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">;</span>
   <span class="py">--font-family-monospace</span><span class="p">:</span> <span class="s1">"Roboto Mono"</span><span class="p">,</span> <span class="s1">"SFMono-Regular"</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s1">"Liberation Mono"</span><span class="p">,</span> <span class="s1">"Courier New"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
@@ -985,6 +1039,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
-<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-B7PDzSOnhaGManpH+MekU5Qg5XrXpZYznfsEn9JyoeJ8JstHhnJzuMllEflSj/ec" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
+<script src="/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/dist/js/melodic.min.js" integrity="sha384-irgAptFhVis/c6pGgDC0Y1GrAOTe7Fk7HmxEiVcrmbKeG9bUhGwUxJP+q1MHBHQ4" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/assets/js/docs.min.js"></script>
   </body>
 </html>
