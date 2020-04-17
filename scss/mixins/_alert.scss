@@ -11,8 +11,8 @@
     color: darken($color, 10%);
   }
 
-  .close::before,
-  .close::after {
+  &.alert-dismissable .close::before,
+  &.alert-dismissable .close::after {
     background: $color;
 
     @include hover-focus { background: $color; }
