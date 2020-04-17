@@ -58,11 +58,14 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 You can see this in action with a live demo:
 
 {% example html %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  Learn more about Inspire's response to COVID-19. At Inspire, we care deeply about our Inspire family and those communities where we serve. We are currently facing an unprecedented situation with the COVID-19 pandemic and it’s important that we all do our part to keep everyone safe. For up-to-the-minute and accurate information about the COVID-19 virus, please refer to the Centers for Disease Control (<a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html" class="alert-link">CDC</a>) or the World Health Organization (<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" class="alert-link">WHO</a>) sites.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 </div>
 {% endexample %}
 
@@ -79,9 +82,7 @@ $('.alert').alert()
 Or with `data` attributes on a button **within the alert**, as demonstrated above:
 
 {% highlight html %}
-<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 {% endhighlight %}
 
 Note that closing an alert will remove it from the DOM.

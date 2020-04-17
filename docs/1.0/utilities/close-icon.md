@@ -9,7 +9,5 @@ toc: true
 **Be sure to include text for screen readers**, as we've done with `aria-label`.
 
 {% example html %}
-<button type="button" class="close" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
+<button type="button" class="close" aria-label="Close"></button>
 {% endexample %}
