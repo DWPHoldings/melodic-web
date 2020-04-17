@@ -3,7 +3,7 @@
   width: $close-width;
   height: $close-height;
   color: $close-color;
-  opacity: .75;
+  opacity: $close-opacity;
 
   &::before,
   &::after {
