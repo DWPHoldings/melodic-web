@@ -109,7 +109,7 @@ Use the included utility classes to add secondary text to a heading.
 
 ## Display headings
 
-Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
+Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using the **display heading**—a larger, slightly more opinionated heading style.
 
 <div class="mwd-example mwd-example-type">
   <table class="table">
@@ -117,24 +117,12 @@ Traditional heading elements are designed to work best in the meat of your page 
       <tr>
         <td><span class="display-1">Display 1</span></td>
       </tr>
-      <tr>
-      <td><span class="display-2">Display 2</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-3">Display 3</span></td>
-      </tr>
-      <tr>
-      <td><span class="display-4">Display 4</span></td>
-      </tr>
     </tbody>
   </table>
 </div>
 
 {% highlight html %}
 <h1 class="display-1">Display 1</h1>
-<h1 class="display-2">Display 2</h1>
-<h1 class="display-3">Display 3</h1>
-<h1 class="display-4">Display 4</h1>
 {% endhighlight %}
 
 ## Lead
