@@ -9,7 +9,7 @@
   &::after {
     position: absolute;
     top: 50%;
-    right: $close-width;
+    right: $close-offset;
     width: $close-width;
     height: $close-thickness;
     content: "";
