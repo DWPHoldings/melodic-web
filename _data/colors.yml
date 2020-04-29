@@ -1,26 +1,38 @@
-- name: blue
-  hex: "#007bff"
+- name: blue-violet
+  hex: "#5147ad"
 - name: indigo
   hex: "#6610f2"
 - name: purple
   hex: "#6f42c1"
-- name: pink
-  hex: "#e83e8c"
+- name: rosewood
+  hex: "#cf126d"
 - name: red
   hex: "#dc3545"
 - name: orange
   hex: "#fd7e14"
+- name: harvest
+  hex: "#ffa867"
+- name: sand
+  hex: "#efdbcb"
 - name: yellow
   hex: "#ffc107"
+- name: mango
+  hex: "#f8cc1c"
+- name: vis-vis
+  hex: "#fff5a5"
+- name: malachite
+  hex: "#00524d"
 - name: green
   hex: "#28a745"
 - name: teal
   hex: "#20c997"
+- name: pacific
+  hex: "#2b6ca3"
 - name: cyan
   hex: "#17a2b8"
 - name: white
   hex: "#fff"
 - name: gray
   hex: "#868e96"
-- name: gray-dark
-  hex: "#343a40"
+- name: cosmos
+  hex: "#1b1b1b"

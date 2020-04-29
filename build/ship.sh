@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
+# Description
+# ---------------
+# This script builds the system for distribution to package repositories
+# It also build the docs site for distribution on Github Pages
 #
 # Usage
 # ---------------
-# 1. Clone second version of Bootstrap in sibling directory named `bs-docs`.
-# 2. Within `bs-docs` copy, switch to `gh-pages` branch.
-# 3. Pull latest, re-bundle, re-npm.
-# 4. Run script.
+# build/ship.sh NEW_VERSION_NUMBER
+
+# Examples
+# ---------------
+# build/ship.sh 1.0.0-beta
+# build/ship.sh 1.1.0
 
 red=$'\e[1;31m'
 green=$'\e[1;32m'
@@ -22,11 +28,32 @@ if [[ $# -lt 1 ]]; then
   exit 1
 fi
 
-# Pulling latest changes, just to be sure
+# Get root directory and cd to it
+root_dir=$(git rev-parse --show-toplevel)
+cd $root_dir
+
+# Just in case
+bundle install
+npm install
+
+# Make the docs sub-repo
+git_url=$(git remote get-url origin)
+rm -rf _site
+mkdir -p _site
+cd _site
+echo $git_url
+git clone "$git_url"
+
+# Check out gh-pages branch
+cd melodic-web
+git checkout gh-pages
+cd "$root_dir"
+
+# Pull latest changes, just to be sure
 printf "\n${magenta}=======================================================${end}"
 printf "\n${magenta}Pulling latest changes...${end}"
 printf "\n${magenta}=======================================================\n\n${end}"
-git pull origin v4-dev
+git pull origin v1-dev
 
 # Update version number
 printf "\n${magenta}=======================================================${end}"
@@ -36,13 +63,13 @@ npm run release-version $current_version $1
 
 # Compile latest CSS and JS
 printf "\n${magenta}=======================================================${end}"
-printf "\n${magenta}Compile latest CSS and JS...${end}"
+printf "\n${magenta}Compiling latest CSS and JS...${end}"
 printf "\n${magenta}=======================================================\n${end}"
 npm run dist
 
 # Generate the SRI hashes
 printf "\n${magenta}=======================================================${end}"
-printf "\n${magenta}Generate the SRI hashes...${end}"
+printf "\n${magenta}Generating the SRI hashes...${end}"
 printf "\n${magenta}=======================================================\n${end}"
 npm run release-sri
 
@@ -52,17 +79,17 @@ printf "\n${magenta}Compressing the dist files...${end}"
 printf "\n${magenta}=======================================================\n${end}"
 npm run release-zip
 
-# Compile the docs
+# Compile the docs (to _gh_pages)
 printf "\n${magenta}=======================================================${end}"
-printf "\n${magenta}Compile hosted documentation...${end}"
+printf "\n${magenta}Compiling hosted documentation...${end}"
 printf "\n${magenta}=======================================================\n${end}"
 npm run docs-github
 
-# Copy the contents of the built docs site over to `bs-docs` repo
+# Copy the contents of the built docs site over to the docs sub-repo
 printf "\n${magenta}=======================================================${end}"
-printf "\n${magenta}Copy it over...${end}"
+printf "\n${magenta}Copying it over to the gh-pages branch...${end}"
 printf "\n${magenta}=======================================================\n${end}"
-cp -rf _gh_pages/. ../bs-docs/
+cp -rf _gh_pages/. _site/melodic-web
 printf "\nDone!\n"
 
 printf "\n${green}=======================================================${end}"

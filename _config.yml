@@ -14,7 +14,7 @@ destination:    ./_gh_pages
 host:           0.0.0.0
 port:           9001
 baseurl:        ""
-url:            "https://getbootstrap.com"
+url:            "https://melodic.helloinspire.com"
 encoding:       UTF-8
 exclude:
   - .git/
@@ -23,19 +23,15 @@ exclude:
   - build/
   - js/
   - node_modules/
-  - nuget/
   - scss/
   - vendor/
   - CODE_OF_CONDUCT.md
-  - composer.json
   - Gemfile
   - Gemfile.lock
-  - package.js
   - package.json
   - package-lock.json
   - README.md
-  - sache.json
-  - twbsconfig.yml
+  - vendor/
 
 plugins:
   - jekyll-redirect-from
@@ -43,34 +39,29 @@ plugins:
   - jekyll-toc
 
 # Social
-title:              Bootstrap
-description:        "The most popular HTML, CSS, and JS library in the world."
-twitter:            getbootstrap
-authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
-social_image_path:  /assets/brand/bootstrap-social.png
-social_logo_path:   /assets/brand/bootstrap-social-logo.png
+title:              Melodic
+description:        "Inspire's front-end design system for the Web."
+twitter:            helloinspire
+authors:            "The Avengers of Inspire, with thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors"
+social_image_path:  /assets/brand/melodic-social.png
+social_logo_path:   /assets/brand/melodic-social-logo.png
 
 # Custom variables
-current_version:      4.0.0
-current_ruby_version: 4.0.0
-docs_version:         4.0
-repo:                 "https://github.com/twbs/bootstrap"
-slack:                "https://bootstrap-slack.herokuapp.com"
-blog:                 "https://blog.getbootstrap.com"
-expo:                 "https://expo.getbootstrap.com"
-jobs:                 "https://jobs.getbootstrap.com"
-themes:               "https://themes.getbootstrap.com"
+current_version:      1.0.0-beta
+current_ruby_version: 1.0.0.beta
+docs_version:         1.0
+repo:                 "https://github.com/DWPHoldings/melodic-web"
 
 download:
-  source:           "https://github.com/twbs/bootstrap/archive/v4.0.0.zip"
-  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.0.0/bootstrap-4.0.0-dist.zip"
+  source:           "https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-beta.zip"
+  dist:             "https://github.com/DWPHoldings/melodic-web/releases/download/v1.0.0-beta/melodic-web-1.0.0-beta-dist.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:              "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  css_hash:         "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  css_hash:         "sha384-4N7clPlkUIr/az6LHLIkf2/qS7d2bMd4WdGmzfS6ug2f7ccnqdpOk2zeX2wDVya3"
   js:               "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  js_hash:          "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  js_hash:          "sha384-irgAptFhVis/c6pGgDC0Y1GrAOTe7Fk7HmxEiVcrmbKeG9bUhGwUxJP+q1MHBHQ4"
   jquery:           "https://code.jquery.com/jquery-3.2.1.slim.min.js"
   jquery_hash:      "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
