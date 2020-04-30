@@ -1,0 +1,35 @@
+version: 0.2
+env:
+  parameter-store:
+    NPM_TOKEN: "/npm/token"
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  pre_build:
+    commands:
+      - echo Build started on `date` 
+      - TAG=$(echo $CODEBUILD_WEBHOOK_HEAD_REF | cut -d'/' -f3)
+      - if [[ -z $TAG || ${TAG:0:1} != "v" ]] ; then COMMIT=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c1-7) ; IS_DEV=1 ;  fi
+      - if [[ ! -z $IS_DEV ]] ; then VERSION=$(git tag -l | tail -1) ; fi
+      - if [[ ! -z $IS_DEV && -z $VERSION ]] ; then VERSION=v1.-1.0; fi
+      - if [[ ! -z $IS_DEV ]] ; then MINOR=$(echo $VERSION | cut -d'.' -f2) ; MINOR=$((MINOR+1)) ; TAG=$(echo $VERSION | cut -d'.' -f1).$MINOR.0-$COMMIT ; fi
+      - TAG=$(echo ${TAG:1})
+      - echo Detected version $TAG
+      - rvm install 2.6.5
+      - gem install bundler -v 1.17.3
+  build:
+    commands:
+      - echo Updating package.json version
+      - search='("version":[[:space:]]*").+(")'
+      - echo $search
+      - replace="\1${TAG}\2"
+      - echo $replace
+      - sed -i -E "s/${search}/${replace}/g" package.json
+      - echo Building npm install
+      - bundle install --deployment --jobs=3 --retry=3
+      - npm install
+  post_build:
+    commands:
+      - echo Pushing the NPM package...
+      - npm publish
