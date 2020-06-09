@@ -8,7 +8,7 @@
   <p align="center">
     Inspire's front-end design system for the Web.
     <br>
-    <a href="https://melodic.helloinspire.com/docs/1.0/"><strong>Explore Melodic docs »</strong></a>
+    <a href="https://melodic.helloinspire.com/docs/2.0/"><strong>Explore Melodic docs »</strong></a>
   </p>
 </p>
 
@@ -30,17 +30,17 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/DWPHoldings/melodic-web/archive/v1.0.0-alpha.zip)
+- [Download the latest release.](https://github.com/DWPHoldings/melodic-web/archive/v2.0.0-beta.zip)
 - Clone the repo: `git clone https://github.com/DWPHoldings/melodic-web.git`
-- Install with [npm](https://www.npmjs.com/): `npm install melodic@1.0.0-alpha`
-- Install with [yarn](https://yarnpkg.com/): `yarn add melodic@1.0.0-alpha`
-- Install with [Rubygems](https://rubygems.org/): `gem install melodic -v 1.0.0.alpha`
+- Install with [npm](https://www.npmjs.com/): `npm install melodic@2.0.0-beta`
+- Install with [yarn](https://yarnpkg.com/): `yarn add melodic@2.0.0-beta`
+- Install with [Rubygems](https://rubygems.org/): `gem install melodic -v 2.0.0.beta`
 
-Read the [Getting started page](https://melodic.helloinspire.com/docs/1.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://melodic.helloinspire.com/docs/2.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Status
 
-[![Build Status](https://img.shields.io/travis/twbs/bootstrap/v4-dev.svg)](https://travis-ci.org/twbs/bootstrap)
+[![Build Status](https://img.shields.io/travis/dwpholdings/melodic-web/v2-dev.svg)](https://travis-ci.org/twbs/bootstrap)
 [![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
 [![Gem version](https://img.shields.io/gem/v/bootstrap.svg)](https://rubygems.org/gems/bootstrap)
 [![peerDependencies Status](https://img.shields.io/david/peer/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=peer)
@@ -119,25 +119,11 @@ For transparency into our release cycle and in striving to maintain backward com
 See [the Releases section of our GitHub project](https://github.com/DWPHoldings/melodic-web/releases) for changelogs for each release version of Melodic.
 
 
-## Creators
+## Creators and Maintainers
 
-The Avengers
-
-**Ariel Kirkwood**
-
-- <https://twitter.com/ariel_kirkwood>
-- <https://github.com/arielkirkwood>
-
-and
-
-**Greg Beck**
-
-- <https://twitter.com/gbeck419>
-- <https://github.com/gbeck419>
-
-and other [Inspire Avengers and contributors](https://github.com/DWPHoldings/melodic-web/graphs/contributors).
+Thank you, [Inspire Avengers and contributors](https://github.com/DWPHoldings/melodic-web/graphs/contributors).
 
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2018 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Portions copyright 2018 [Inspire Energy Holdings, LLC.](https://helloinspire.com) Code released under the [MIT License](https://github.com/DWPHoldings/melodic-web/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/DWPHoldings/melodic-web/blob/master/docs/LICENSE).
+Code and documentation copyright 2011-2018 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Portions copyright 2020 [Inspire Energy Holdings, LLC.](https://inspireenergy.com) Code released under the [MIT License](https://github.com/DWPHoldings/melodic-web/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/DWPHoldings/melodic-web/blob/master/docs/LICENSE).
