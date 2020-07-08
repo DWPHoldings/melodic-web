@@ -321,7 +321,7 @@ $colors: (
   "malachite":  $malachite,
   "green":  $green,
   "teal":  $teal,
-  "pacific":  $pacific,
+  "atlantic":  $atlantic,
   "anakiwa":  $anakiwa,
   "pelorous":  $pelorous,
   "cyan":  $cyan,
@@ -399,7 +399,7 @@ Here are the variables we include (note that the `:root` is required). They're l
   --malachite: #00524d;
   --green: #28a745;
   --teal: #20c997;
-  --pacific: #2b6ca3;
+  --atlantic: #363e8d;
   --anakiwa: #87dffc;
   --pelorous: #41b3c6;
   --cyan: #17a2b8;

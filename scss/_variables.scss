@@ -33,10 +33,10 @@ $grays: map-merge((
 
 // Brand colors
 $fuschia:        #b31066 !default;
+$atlantic:       #363e8d !default;
 $sand:           #efdbcb !default;
 $cosmos:         #1b1b1b !default;
 $malachite:      #00524d !default;
-$pacific:        #2b6ca3 !default;
 $harvest:        #ffa867 !default;
 
 // Additional colors
@@ -55,10 +55,10 @@ $cyan:           #17a2b8 !default;
 $colors: () !default;
 $colors: map-merge((
   "fuschia":        $fuschia,
+  "atlantic":       $atlantic,
   "sand":           $sand,
   "cosmos":         $cosmos,
   "malachite":      $malachite,
-  "pacific":        $pacific,
   "harvest":        $harvest,
   "blue-violet":    $blue-violet,
   "indigo":         $indigo,
@@ -78,17 +78,17 @@ $colors: map-merge((
 $brand-colors: () !default;
 $brand-colors: map-merge((
   "fuschia":   $fuschia,
+  "atlantic":  $atlantic,
   "sand":      $sand,
   "cosmos":    $cosmos,
   "malachite": $malachite,
-  "pacific":   $pacific,
   "harvest":   $harvest
 ), $brand-colors);
 
 $primary:       $fuschia !default;
 $secondary:     $gray-600 !default;
 $success:       $malachite !default;
-$info:          $pacific !default;
+$info:          $cyan !default;
 $warning:       $harvest !default;
 $danger:        $red !default;
 $light:         $white !default;
@@ -234,7 +234,7 @@ $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
 $component-active-color:      $white !default;
-$component-active-bg:         color("pacific") !default;
+$component-active-bg:         color("atlantic") !default;
 
 $caret-width:                 .3em !default;
 
