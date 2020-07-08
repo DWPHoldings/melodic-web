@@ -32,7 +32,7 @@ $grays: map-merge((
 ), $grays);
 
 // Brand colors
-$rosewood:       #cf126d !default;
+$fuschia:        #b31066 !default;
 $sand:           #efdbcb !default;
 $cosmos:         #1b1b1b !default;
 $malachite:      #00524d !default;
@@ -54,7 +54,7 @@ $cyan:           #17a2b8 !default;
 
 $colors: () !default;
 $colors: map-merge((
-  "rosewood":       $rosewood,
+  "fuschia":        $fuschia,
   "sand":           $sand,
   "cosmos":         $cosmos,
   "malachite":      $malachite,
@@ -77,7 +77,7 @@ $colors: map-merge((
 
 $brand-colors: () !default;
 $brand-colors: map-merge((
-  "rosewood":  $rosewood,
+  "fuschia":   $fuschia,
   "sand":      $sand,
   "cosmos":    $cosmos,
   "malachite": $malachite,
@@ -85,7 +85,7 @@ $brand-colors: map-merge((
   "harvest":   $harvest
 ), $brand-colors);
 
-$primary:       $rosewood !default;
+$primary:       $fuschia !default;
 $secondary:     $gray-600 !default;
 $success:       $malachite !default;
 $info:          $pacific !default;
@@ -899,7 +899,7 @@ $close-opacity:                     .75 !default;
 // Code
 
 $code-font-size:                    87.5% !default;
-$code-color:                        $rosewood !default;
+$code-color:                        $primary !default;
 
 $kbd-padding-y:                     .2rem !default;
 $kbd-padding-x:                     .4rem !default;
