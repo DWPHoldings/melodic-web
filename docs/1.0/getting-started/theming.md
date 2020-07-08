@@ -310,7 +310,7 @@ $colors: (
   "blue-violet":  $blue-violet,
   "indigo":  $indigo,
   "purple":  $purple,
-  "rosewood":  $rosewood,
+  "fuschia":  $fuschia,
   "red":  $red,
   "orange":  $orange,
   "harvest":  $harvest,
@@ -388,7 +388,7 @@ Here are the variables we include (note that the `:root` is required). They're l
   --blue-violet: #5147ad;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --rosewood: #cf126d;
+  --fuschia: #b31066;
   --red: #dc3545;
   --orange: #fd7e14;
   --harvest: #ffa867;
