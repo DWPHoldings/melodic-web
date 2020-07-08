@@ -26,6 +26,28 @@
   font-weight: $font-weight-bold;
 }
 
+// Circular
+@font-face {
+  font-family: Circular;
+  src: url("https://s3-us-west-2.amazonaws.com/assets.inspirecleanenergy-dev.com/Circular-Light.otf");
+  src: url("https://s3-us-west-2.amazonaws.com/assets.inspirecleanenergy-dev.com/Circular-Light.otf?#iefix") format("embedded-opentype");
+  font-weight: $font-weight-light;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url("https://s3-us-west-2.amazonaws.com/assets.inspirecleanenergy-dev.com/Circular-Regular.otf");
+  src: url("https://s3-us-west-2.amazonaws.com/assets.inspirecleanenergy-dev.com/Circular-Regular.otf?#iefix") format("embedded-opentype");
+  font-weight: $font-weight-normal;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url("https://s3-us-west-2.amazonaws.com/assets.inspirecleanenergy-dev.com/Circular-Bold.otf");
+  src: url("https://s3-us-west-2.amazonaws.com/assets.inspirecleanenergy-dev.com/Circular-Bold.otf?#iefix") format("embedded-opentype");
+  font-weight: $font-weight-bold;
+}
+
 //
 // Headings
 //
