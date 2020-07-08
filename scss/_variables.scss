@@ -35,7 +35,6 @@ $grays: map-merge((
 $fuschia:        #b31066 !default;
 $sand:           #efdbcb !default;
 $cosmos:         #1b1b1b !default;
-$malachite:      #00524d !default;
 $pacific:        #2b6ca3 !default;
 $harvest:        #ffa867 !default;
 
@@ -48,7 +47,7 @@ $orange:         #fd7e14 !default;
 $yellow:         #ffc107 !default;
 $mango:          #f8cc1c !default;
 $vis-vis:        #fff5a5 !default;
-$green:          #28a745 !default;
+$green:          #008556 !default;
 $teal:           #20c997 !default;
 $cyan:           #17a2b8 !default;
 
@@ -57,7 +56,6 @@ $colors: map-merge((
   "fuschia":        $fuschia,
   "sand":           $sand,
   "cosmos":         $cosmos,
-  "malachite":      $malachite,
   "pacific":        $pacific,
   "harvest":        $harvest,
   "blue-violet":    $blue-violet,
@@ -80,14 +78,13 @@ $brand-colors: map-merge((
   "fuschia":   $fuschia,
   "sand":      $sand,
   "cosmos":    $cosmos,
-  "malachite": $malachite,
   "pacific":   $pacific,
   "harvest":   $harvest
 ), $brand-colors);
 
 $primary:       $fuschia !default;
 $secondary:     $gray-600 !default;
-$success:       $malachite !default;
+$success:       $green !default;
 $info:          $pacific !default;
 $warning:       $harvest !default;
 $danger:        $red !default;

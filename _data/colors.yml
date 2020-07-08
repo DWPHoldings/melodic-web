@@ -20,10 +20,8 @@
   hex: "#f8cc1c"
 - name: vis-vis
   hex: "#fff5a5"
-- name: malachite
-  hex: "#00524d"
 - name: green
-  hex: "#28a745"
+  hex: "#008556"
 - name: teal
   hex: "#20c997"
 - name: pacific
