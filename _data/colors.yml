@@ -10,14 +10,10 @@
   hex: "#de1C22"
 - name: orange
   hex: "#e86825"
-- name: harvest
-  hex: "#ffa867"
 - name: sand
   hex: "#efdbcb"
-- name: yellow
-  hex: "#ffc107"
-- name: mango
-  hex: "#f8cc1c"
+- name: marigold
+  hex: "#ffb000"
 - name: vis-vis
   hex: "#fff5a5"
 - name: green
