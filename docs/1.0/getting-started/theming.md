@@ -318,7 +318,6 @@ $colors: (
   "yellow":  $yellow,
   "mango":  $mango,
   "vis-vis":  $vis-vis,
-  "malachite":  $malachite,
   "green":  $green,
   "teal":  $teal,
   "pacific":  $pacific,
@@ -390,14 +389,13 @@ Here are the variables we include (note that the `:root` is required). They're l
   --purple: #6f42c1;
   --fuschia: #b31066;
   --red: #dc3545;
-  --orange: #fd7e14;
+  --orange: #e86825;
   --harvest: #ffa867;
   --sand: #efdbcb;
   --yellow: #ffc107;
   --mango: #f8cc1c;
   --vis-vis: #fff5a5;
-  --malachite: #00524d;
-  --green: #28a745;
+  --green: #008556;
   --teal: #20c997;
   --pacific: #2b6ca3;
   --anakiwa: #87dffc;
