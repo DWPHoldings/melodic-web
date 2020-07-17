@@ -1,7 +1,7 @@
 // Local docs variables
-$mwd-rosewood:        $rosewood !default;
-$mwd-rosewood-bright: lighten(saturate($mwd-rosewood, 5%), 15%) !default;
-$mwd-rosewood-light:  lighten(saturate($mwd-rosewood, 5%), 45%) !default;
+$mwd-primary:        $primary !default;
+$mwd-primary-bright: lighten(saturate($mwd-primary, 5%), 15%) !default;
+$mwd-primary-light:  lighten(saturate($mwd-primary, 5%), 45%) !default;
 $mwd-info:           #5bc0de !default;
 $mwd-warning:        #f8cc1c !default;
 $mwd-danger:         #d9534f !default;
