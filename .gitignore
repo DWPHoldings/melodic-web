@@ -44,3 +44,5 @@ melodic_config.yml
 
 # Folders to ignore
 node_modules
+
+.env
