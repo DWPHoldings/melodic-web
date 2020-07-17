@@ -21,14 +21,14 @@
   margin: 0 -5px;
   overflow: hidden; // clearfix
 
-  .mwd-rosewood {
-    background-color: $mwd-rosewood;
+  .mwd-primary {
+    background-color: $mwd-primary;
   }
-  .mwd-rosewood-light {
-    background-color: $mwd-rosewood-light;
+  .mwd-primary-light {
+    background-color: $mwd-primary-light;
   }
-  .mwd-rosewood-lighter {
-    background-color: #e5e1ea;
+  .mwd-primary-lighter {
+    background-color: #e5e1ea; // TODO: update to already-specified lightest variant of primary/fuschia;
   }
   .mwd-gray {
     background-color: #f9f9f9;

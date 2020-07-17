@@ -4,30 +4,24 @@
   hex: "#6610f2"
 - name: purple
   hex: "#6f42c1"
-- name: rosewood
-  hex: "#cf126d"
+- name: fuschia
+  hex: "#b31066"
 - name: red
-  hex: "#dc3545"
+  hex: "#de1C22"
 - name: orange
-  hex: "#fd7e14"
-- name: harvest
-  hex: "#ffa867"
+  hex: "#e86825"
 - name: sand
   hex: "#efdbcb"
-- name: yellow
-  hex: "#ffc107"
-- name: mango
-  hex: "#f8cc1c"
+- name: marigold
+  hex: "#ffb000"
 - name: vis-vis
   hex: "#fff5a5"
-- name: malachite
-  hex: "#00524d"
 - name: green
-  hex: "#28a745"
+  hex: "#008556"
 - name: teal
   hex: "#20c997"
-- name: pacific
-  hex: "#2b6ca3"
+- name: atlantic
+  hex: "#363e8d"
 - name: cyan
   hex: "#17a2b8"
 - name: white

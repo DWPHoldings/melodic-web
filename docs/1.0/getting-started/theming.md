@@ -310,18 +310,15 @@ $colors: (
   "blue-violet":  $blue-violet,
   "indigo":  $indigo,
   "purple":  $purple,
-  "rosewood":  $rosewood,
+  "fuschia":  $fuschia,
   "red":  $red,
   "orange":  $orange,
-  "harvest":  $harvest,
+  "marigold":  $marigold,
   "sand":  $sand,
-  "yellow":  $yellow,
-  "mango":  $mango,
   "vis-vis":  $vis-vis,
-  "malachite":  $malachite,
   "green":  $green,
   "teal":  $teal,
-  "pacific":  $pacific,
+  "atlantic":  $atlantic,
   "anakiwa":  $anakiwa,
   "pelorous":  $pelorous,
   "cyan":  $cyan,
@@ -388,18 +385,17 @@ Here are the variables we include (note that the `:root` is required). They're l
   --blue-violet: #5147ad;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --rosewood: #cf126d;
+  --fuschia: #b31066;
   --red: #dc3545;
-  --orange: #fd7e14;
+  --orange: #e86825;
   --harvest: #ffa867;
   --sand: #efdbcb;
   --yellow: #ffc107;
   --mango: #f8cc1c;
   --vis-vis: #fff5a5;
-  --malachite: #00524d;
-  --green: #28a745;
+  --green: #008556;
   --teal: #20c997;
-  --pacific: #2b6ca3;
+  --atlantic: #363e8d;
   --anakiwa: #87dffc;
   --pelorous: #41b3c6;
   --cyan: #17a2b8;
