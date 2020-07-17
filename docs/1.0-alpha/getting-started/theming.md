@@ -321,7 +321,7 @@ $colors: (
   "malachite":  $malachite,
   "green":  $green,
   "teal":  $teal,
-  "pacific":  $pacific,
+  "atlantic":  $atlantic,
   "anakiwa":  $anakiwa,
   "pelorous":  $pelorous,
   "cyan":  $cyan,
