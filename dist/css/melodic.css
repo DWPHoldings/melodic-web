@@ -1,5 +1,5 @@
 /*!
- * Melodic v1.0.0-alpha (https://melodic.helloinspire.com)
+ * Melodic v2.0.0-alpha (https://melodic.helloinspire.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Portions copyright 2018 Inspire Energy Holdings, LLC
@@ -4774,127 +4774,214 @@ tbody.collapse.show {
 }
 
 .alert-dismissible {
-  padding-right: 4rem;
+  padding-right: 3.5rem;
 }
 
 .alert-dismissible .close {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.75rem 1.25rem;
-  color: inherit;
+  padding: 1.5rem;
 }
 
 .alert-primary {
-  color: #53072c;
-  background-color: #fae7f0;
-  border-color: #f5d0e2;
+  color: #fff;
+  background-color: #cf126d;
+  border-color: #290416;
 }
 
 .alert-primary hr {
-  border-top-color: #f1bbd5;
+  border-top-color: #f2f2f2;
 }
 
 .alert-primary .alert-link {
-  color: #240313;
+  color: #e6e6e6;
+}
+
+.alert-primary.alert-dismissable .close::before,
+.alert-primary.alert-dismissable .close::after {
+  background: #fff;
+}
+
+.alert-primary.alert-dismissable .close::before:hover, .alert-primary.alert-dismissable .close::before:focus,
+.alert-primary.alert-dismissable .close::after:hover,
+.alert-primary.alert-dismissable .close::after:focus {
+  background: #fff;
 }
 
 .alert-secondary {
-  color: #2b2f32;
-  background-color: #f0f1f2;
-  border-color: #e2e3e5;
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #161719;
 }
 
 .alert-secondary hr {
-  border-top-color: #d5d6d9;
+  border-top-color: #f2f2f2;
 }
 
 .alert-secondary .alert-link {
-  color: #131517;
+  color: #e6e6e6;
+}
+
+.alert-secondary.alert-dismissable .close::before,
+.alert-secondary.alert-dismissable .close::after {
+  background: #fff;
+}
+
+.alert-secondary.alert-dismissable .close::before:hover, .alert-secondary.alert-dismissable .close::before:focus,
+.alert-secondary.alert-dismissable .close::after:hover,
+.alert-secondary.alert-dismissable .close::after:focus {
+  background: #fff;
 }
 
 .alert-success {
-  color: #00211f;
-  background-color: #e6eeed;
-  border-color: #ccdcdb;
+  color: #fff;
+  background-color: #00524d;
+  border-color: #00100f;
 }
 
 .alert-success hr {
-  border-top-color: #bdd2d0;
+  border-top-color: #f2f2f2;
 }
 
 .alert-success .alert-link {
-  color: black;
+  color: #e6e6e6;
+}
+
+.alert-success.alert-dismissable .close::before,
+.alert-success.alert-dismissable .close::after {
+  background: #fff;
+}
+
+.alert-success.alert-dismissable .close::before:hover, .alert-success.alert-dismissable .close::before:focus,
+.alert-success.alert-dismissable .close::after:hover,
+.alert-success.alert-dismissable .close::after:focus {
+  background: #fff;
 }
 
 .alert-info {
-  color: #112b41;
-  background-color: #eaf0f6;
-  border-color: #d5e2ed;
+  color: #fff;
+  background-color: #2b6ca3;
+  border-color: #091621;
 }
 
 .alert-info hr {
-  border-top-color: #c3d6e5;
+  border-top-color: #f2f2f2;
 }
 
 .alert-info .alert-link {
-  color: #061019;
+  color: #e6e6e6;
+}
+
+.alert-info.alert-dismissable .close::before,
+.alert-info.alert-dismissable .close::after {
+  background: #fff;
+}
+
+.alert-info.alert-dismissable .close::before:hover, .alert-info.alert-dismissable .close::before:focus,
+.alert-info.alert-dismissable .close::after:hover,
+.alert-info.alert-dismissable .close::after:focus {
+  background: #fff;
 }
 
 .alert-warning {
-  color: #664329;
-  background-color: #fff6f0;
-  border-color: #ffeee1;
+  color: #1b1b1b;
+  background-color: #ffa867;
+  border-color: #332215;
 }
 
 .alert-warning hr {
-  border-top-color: #ffe0c8;
+  border-top-color: #0e0e0e;
 }
 
 .alert-warning .alert-link {
-  color: #422b1a;
+  color: #020202;
+}
+
+.alert-warning.alert-dismissable .close::before,
+.alert-warning.alert-dismissable .close::after {
+  background: #1b1b1b;
+}
+
+.alert-warning.alert-dismissable .close::before:hover, .alert-warning.alert-dismissable .close::before:focus,
+.alert-warning.alert-dismissable .close::after:hover,
+.alert-warning.alert-dismissable .close::after:focus {
+  background: #1b1b1b;
 }
 
 .alert-danger {
-  color: #58151c;
-  background-color: #fcebec;
-  border-color: #f8d7da;
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #2c0b0e;
 }
 
 .alert-danger hr {
-  border-top-color: #f4c1c6;
+  border-top-color: #f2f2f2;
 }
 
 .alert-danger .alert-link {
-  color: #2f0b0f;
+  color: #e6e6e6;
+}
+
+.alert-danger.alert-dismissable .close::before,
+.alert-danger.alert-dismissable .close::after {
+  background: #fff;
+}
+
+.alert-danger.alert-dismissable .close::before:hover, .alert-danger.alert-dismissable .close::before:focus,
+.alert-danger.alert-dismissable .close::after:hover,
+.alert-danger.alert-dismissable .close::after:focus {
+  background: #fff;
 }
 
 .alert-light {
-  color: #636464;
-  background-color: #fefeff;
-  border-color: #fefefe;
+  color: #1b1b1b;
+  background-color: #f8f9fa;
+  border-color: #323232;
 }
 
 .alert-light hr {
-  border-top-color: #f1f1f1;
+  border-top-color: #0e0e0e;
 }
 
 .alert-light .alert-link {
-  color: #4a4a4a;
+  color: #020202;
+}
+
+.alert-light.alert-dismissable .close::before,
+.alert-light.alert-dismissable .close::after {
+  background: #1b1b1b;
+}
+
+.alert-light.alert-dismissable .close::before:hover, .alert-light.alert-dismissable .close::before:focus,
+.alert-light.alert-dismissable .close::after:hover,
+.alert-light.alert-dismissable .close::after:focus {
+  background: #1b1b1b;
 }
 
 .alert-dark {
-  color: #0b0b0b;
-  background-color: #e8e8e8;
-  border-color: #d1d1d1;
+  color: #fff;
+  background-color: #1b1b1b;
+  border-color: #050505;
 }
 
 .alert-dark hr {
-  border-top-color: #c4c4c4;
+  border-top-color: #f2f2f2;
 }
 
 .alert-dark .alert-link {
-  color: black;
+  color: #e6e6e6;
+}
+
+.alert-dark.alert-dismissable .close::before,
+.alert-dark.alert-dismissable .close::after {
+  background: #fff;
+}
+
+.alert-dark.alert-dismissable .close::before:hover, .alert-dark.alert-dismissable .close::before:focus,
+.alert-dark.alert-dismissable .close::after:hover,
+.alert-dark.alert-dismissable .close::after:focus {
+  background: #fff;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -5168,18 +5255,34 @@ tbody.collapse.show {
 
 .close {
   float: right;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
+  width: 1rem;
+  height: 1rem;
   color: #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity: .5;
+  opacity: 0.75;
+}
+
+.close::before, .close::after {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 1rem;
+  height: 2px;
+  content: "";
+  background: #000;
+}
+
+.close::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .close:hover, .close:focus {
-  color: #000;
-  text-decoration: none;
-  opacity: .75;
+  opacity: 1;
 }
 
 .close:not(:disabled):not(.disabled) {

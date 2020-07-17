@@ -30,11 +30,11 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/DWPHoldings/melodic-web/archive/v2.0.0-beta.zip)
+- [Download the latest release.](https://github.com/DWPHoldings/melodic-web/archive/v2.0.0-alpha.zip)
 - Clone the repo: `git clone https://github.com/DWPHoldings/melodic-web.git`
-- Install with [npm](https://www.npmjs.com/): `npm install melodic@2.0.0-beta`
-- Install with [yarn](https://yarnpkg.com/): `yarn add melodic@2.0.0-beta`
-- Install with [Rubygems](https://rubygems.org/): `gem install melodic -v 2.0.0.beta`
+- Install with [npm](https://www.npmjs.com/): `npm install melodic@2.0.0-alpha`
+- Install with [yarn](https://yarnpkg.com/): `yarn add melodic@2.0.0-alpha`
+- Install with [Rubygems](https://rubygems.org/): `gem install melodic -v 2.0.0.alpha`
 
 Read the [Getting started page](https://melodic.helloinspire.com/docs/2.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -92,7 +92,7 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://melodic.helloinspire.com/docs/1.0/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+1. Run through the [tooling setup](https://melodic.helloinspire.com/docs/2.0/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
 2. Run `npm install` to install Node.js dependencies.
 3. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 4. From the root `/melodic-web` directory, run `npm run docs-serve` in the command line.

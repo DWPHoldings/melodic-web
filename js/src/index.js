@@ -13,7 +13,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Melodic (v1.0.0-alpha): index.js
+ * Melodic (v2.0.0-alpha): index.js
  * Licensed under MIT (https://github.com/DWPHoldings/melodic-web/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */

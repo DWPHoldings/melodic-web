@@ -4,7 +4,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Melodic (v1.0.0-alpha): dropdown.js
+ * Melodic (v2.0.0-alpha): dropdown.js
  * Licensed under MIT (https://github.com/DWPHoldings/melodic-web/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ const Dropdown = (($) => {
    */
 
   const NAME                     = 'dropdown'
-  const VERSION                  = '1.0.0-alpha'
+  const VERSION                  = '2.0.0-alpha'
   const DATA_KEY                 = 'mel.dropdown'
   const EVENT_KEY                = `.${DATA_KEY}`
   const DATA_API_KEY             = '.data-api'

@@ -3,7 +3,7 @@ import Tooltip from './tooltip'
 
 /**
  * --------------------------------------------------------------------------
- * Melodic (v1.0.0-alpha): popover.js
+ * Melodic (v2.0.0-alpha): popover.js
  * Licensed under MIT (https://github.com/DWPHoldings/melodic-web/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -16,7 +16,7 @@ const Popover = (($) => {
    */
 
   const NAME                = 'popover'
-  const VERSION             = '1.0.0-alpha'
+  const VERSION             = '2.0.0-alpha'
   const DATA_KEY            = 'mel.popover'
   const EVENT_KEY           = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT  = $.fn[NAME]
