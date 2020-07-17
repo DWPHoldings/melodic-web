@@ -33,9 +33,9 @@ $grays: map-merge((
 
 // Brand colors
 $fuschia:        #b31066 !default;
+$atlantic:       #363e8d !default;
 $sand:           #efdbcb !default;
 $cosmos:         #1b1b1b !default;
-$pacific:        #2b6ca3 !default;
 $marigold:       #ffb000 !default;
 
 // Additional colors
@@ -52,9 +52,9 @@ $cyan:           #17a2b8 !default;
 $colors: () !default;
 $colors: map-merge((
   "fuschia":        $fuschia,
+  "atlantic":       $atlantic,
   "sand":           $sand,
   "cosmos":         $cosmos,
-  "pacific":        $pacific,
   "blue-violet":    $blue-violet,
   "indigo":         $indigo,
   "purple":         $purple,
@@ -72,9 +72,9 @@ $colors: map-merge((
 $brand-colors: () !default;
 $brand-colors: map-merge((
   "fuschia":   $fuschia,
+  "atlantic":  $atlantic,
   "sand":      $sand,
   "cosmos":    $cosmos,
-  "pacific":   $pacific,
   "marigold":  $marigold
 ), $brand-colors);
 
@@ -227,7 +227,7 @@ $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
 $component-active-color:      $white !default;
-$component-active-bg:         color("pacific") !default;
+$component-active-bg:         color("atlantic") !default;
 
 $caret-width:                 .3em !default;
 

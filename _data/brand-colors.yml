@@ -1,10 +1,10 @@
 - name: fuschia
   hex: "#b31066"
+- name: atlantic
+  hex: "#363e8d"
 - name: sand
   hex: "#efdbcb"
 - name: cosmos
   hex: "#1b1b1b"
-- name: pacific
-  hex: "#2b6ca3"
 - name: marigold
   hex: "#ffb000"

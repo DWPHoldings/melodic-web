@@ -25,7 +25,7 @@
   }
 
   @include media-breakpoint-up(md) {
-    @include gradient-x-three-colors($pacific, $fuschia, 50%, $marigold);
+    @include gradient-x-three-colors($atlantic, $fuschia, 50%, $marigold);
 
     @supports (position: sticky) {
       position: sticky;
