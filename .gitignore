@@ -46,3 +46,4 @@ melodic_config.yml
 node_modules
 
 .env
+.npmrc
