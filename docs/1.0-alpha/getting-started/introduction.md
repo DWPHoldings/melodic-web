@@ -5,8 +5,8 @@ description: Get started with Melodic, Inspire's front-end design system for Web
 group: getting-started
 redirect_from:
   - /docs/
-  - /docs/1.0/
-  - /docs/1.0/getting-started/
+  - /docs/2.0/
+  - /docs/2.0/getting-started/
   - /docs/getting-started/
 toc: true
 ---
