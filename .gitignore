@@ -1,6 +1,7 @@
 # Ignore docs files
 _gh_pages
 _site
+.npmrc
 
 # Ignore ruby files
 .ruby-version
