@@ -7,23 +7,17 @@
 - name: fuschia
   hex: "#b31066"
 - name: red
-  hex: "#dc3545"
+  hex: "#de1C22"
 - name: orange
-  hex: "#fd7e14"
-- name: harvest
-  hex: "#ffa867"
+  hex: "#e86825"
 - name: sand
   hex: "#efdbcb"
-- name: yellow
-  hex: "#ffc107"
-- name: mango
-  hex: "#f8cc1c"
+- name: marigold
+  hex: "#ffb000"
 - name: vis-vis
   hex: "#fff5a5"
-- name: malachite
-  hex: "#00524d"
 - name: green
-  hex: "#28a745"
+  hex: "#008556"
 - name: teal
   hex: "#20c997"
 - name: atlantic

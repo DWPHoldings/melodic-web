@@ -36,19 +36,16 @@ $fuschia:        #b31066 !default;
 $atlantic:       #363e8d !default;
 $sand:           #efdbcb !default;
 $cosmos:         #1b1b1b !default;
-$malachite:      #00524d !default;
-$harvest:        #ffa867 !default;
+$marigold:       #ffb000 !default;
 
 // Additional colors
 $blue-violet:    #5147ad !default;
 $indigo:         #6610f2 !default;
 $purple:         #6f42c1 !default;
-$red:            #dc3545 !default;
-$orange:         #fd7e14 !default;
-$yellow:         #ffc107 !default;
-$mango:          #f8cc1c !default;
+$red:            #de1C22 !default;
+$orange:         #e86825 !default;
 $vis-vis:        #fff5a5 !default;
-$green:          #28a745 !default;
+$green:          #008556 !default;
 $teal:           #20c997 !default;
 $cyan:           #17a2b8 !default;
 
@@ -58,15 +55,12 @@ $colors: map-merge((
   "atlantic":       $atlantic,
   "sand":           $sand,
   "cosmos":         $cosmos,
-  "malachite":      $malachite,
-  "harvest":        $harvest,
   "blue-violet":    $blue-violet,
   "indigo":         $indigo,
   "purple":         $purple,
   "red":            $red,
   "orange":         $orange,
-  "yellow":         $yellow,
-  "mango":          $mango,
+  "marigold":       $marigold,
   "vis-vis":        $vis-vis,
   "green":          $green,
   "teal":           $teal,
@@ -81,15 +75,14 @@ $brand-colors: map-merge((
   "atlantic":  $atlantic,
   "sand":      $sand,
   "cosmos":    $cosmos,
-  "malachite": $malachite,
-  "harvest":   $harvest
+  "marigold":  $marigold
 ), $brand-colors);
 
 $primary:       $fuschia !default;
 $secondary:     $gray-600 !default;
-$success:       $malachite !default;
-$info:          $cyan !default;
-$warning:       $harvest !default;
+$success:       $green !default;
+$info:          $pacific !default;
+$warning:       $orange !default;
 $danger:        $red !default;
 $light:         $white !default;
 $dark:          $black !default;

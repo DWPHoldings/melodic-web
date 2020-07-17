@@ -6,7 +6,5 @@
   hex: "#efdbcb"
 - name: cosmos
   hex: "#1b1b1b"
-- name: malachite
-  hex: "#00524d"
-- name: harvest
-  hex: "#ffa867"
+- name: marigold
+  hex: "#ffb000"
