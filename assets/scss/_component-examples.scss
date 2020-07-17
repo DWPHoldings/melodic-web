@@ -94,7 +94,7 @@
   float: right;
   width: 4rem;
   height: 8rem;
-  background-color: lighten($yellow, 25%);
+  background-color: lighten($marigold, 25%);
   border-radius: .25rem;
 }
 
@@ -406,6 +406,6 @@
   }
   pre code {
     font-size: inherit;
-    color: $gray-900; // Effectively the base text color
+    color: $body-color;
   }
 }
