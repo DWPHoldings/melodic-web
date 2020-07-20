@@ -30,19 +30,22 @@
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Light.woff2") format("woff2"), url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Light.woff") format("woff"), url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Light.ttf") format("truetype");
+  src: url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Light.woff2") format("woff2"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Light.woff") format("woff"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/Circular-Light.ttf") format("truetype");
+  font-style: normal;
   font-weight: $font-weight-light;
 }
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Regular.woff2") format("woff2"), url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Regular.woff") format("woff"), url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Regular.ttf") format("truetype");
+  src: url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Regular.woff2") format("woff2"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Regular.woff") format("woff"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/Circular-Regular.ttf") format("truetype");
+  font-style: normal;
   font-weight: $font-weight-normal;
 }
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Bold.woff2") format("woff2"), url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Bold.woff") format("woff"), url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Bold.ttf") format("truetype");
+  src: url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Bold.woff2") format("woff2"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Bold.woff") format("woff"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/Circular-Bold.ttf") format("truetype");
+  font-style: normal;
   font-weight: $font-weight-bold;
 }
 
