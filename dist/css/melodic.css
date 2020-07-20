@@ -387,22 +387,19 @@ template {
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Light.otf");
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Light.otf?#iefix") format("embedded-opentype");
+  src: url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Light.woff2") format("woff2"), url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Light.woff") format("woff"), url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Regular.otf");
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Regular.otf?#iefix") format("embedded-opentype");
+  src: url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Regular.woff2") format("woff2"), url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Regular.woff") format("woff"), url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Bold.otf");
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Bold.otf?#iefix") format("embedded-opentype");
+  src: url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Bold.woff2") format("woff2"), url("http://dx6f60kvkrzhe.cloudfront.net/CircularXXWeb-Bold.woff") format("woff"), url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
