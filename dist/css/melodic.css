@@ -37,7 +37,7 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-serif: Merriweather, Georgia, serif;
-  --font-family-sans-serif: CircularXX, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: "CircularXX", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: "Roboto Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -66,7 +66,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: CircularXX, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "CircularXX", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -387,29 +387,29 @@ template {
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Light.otf");
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Light.otf?#iefix") format("embedded-opentype");
+  src: url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Light.woff2") format("woff2"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Light.woff") format("woff"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/Circular-Light.ttf") format("truetype");
+  font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Regular.otf");
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Regular.otf?#iefix") format("embedded-opentype");
+  src: url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Regular.woff2") format("woff2"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Regular.woff") format("woff"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/Circular-Regular.ttf") format("truetype");
+  font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: CircularXX;
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Bold.otf");
-  src: url("http://dx6f60kvkrzhe.cloudfront.net/Circular-Bold.otf?#iefix") format("embedded-opentype");
+  src: url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Bold.woff2") format("woff2"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/CircularXXWeb-Bold.woff") format("woff"), url("https://dx6f60kvkrzhe.cloudfront.net/fonts/Circular-Bold.ttf") format("truetype");
+  font-style: normal;
   font-weight: 700;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: CircularXX, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "CircularXX", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
   line-height: 1.2;
   color: inherit;
@@ -5481,7 +5481,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: CircularXX, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "CircularXX", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5594,7 +5594,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: CircularXX, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "CircularXX", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;

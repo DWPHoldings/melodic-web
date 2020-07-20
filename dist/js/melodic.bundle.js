@@ -1,5 +1,5 @@
 /*!
-  * Melodic v2.0.0 (https://melodic.helloinspire.com)
+  * Melodic v2.0.0-alpha.4 (https://melodic.helloinspire.com)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Portions Copyright 2018 Inspire Energy Holdings, LLC
   * Licensed under MIT (https://github.com/DWPHoldings/melodic-web/blob/master/LICENSE)
