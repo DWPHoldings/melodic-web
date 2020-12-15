@@ -7,12 +7,16 @@
 .page-link {
   position: relative;
   display: block;
-  padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: -$pagination-border-width;
+  padding: $pagination-padding-y ($pagination-padding-x * .75); // shrink padding on mobile to more easily fit gap page links
+  font-size: $pagination-font-size;
+  font-weight: $pagination-font-weight;
   line-height: $pagination-line-height;
   color: $pagination-color;
   background-color: $pagination-bg;
-  border: $pagination-border-width solid $pagination-border-color;
+  border: none;
+
+  // Set design default above mobile
+  @include media-breakpoint-up(sm) { padding: $pagination-padding-y $pagination-padding-x; }
 
   &:hover {
     color: $pagination-hover-color;
@@ -31,26 +35,41 @@
   &:not(:disabled):not(.disabled) {
     cursor: pointer;
   }
+
+  .next & { @include caret(right); }
+  .prev & { @include caret(left); }
+  .next &, .prev & {
+    // comes first so that styles below override
+    @include text-hide;
+
+    width: $pagination-height;
+    height: $pagination-height;
+    padding: 0;
+    text-align: center;
+
+    &:before, &:after {
+      // last operand represents $pagination-border-width converted to rem
+      margin-top: ((($pagination-height - $caret-height) / 2) - 0.0625rem);
+      margin-left: 0;
+      margin-right: 0;
+
+      background-position: center .375rem;
+    }
+  }
 }
 
 .page-item {
-  &:first-child {
-    .page-link {
-      margin-left: 0;
-      @include border-left-radius($border-radius);
-    }
-  }
-  &:last-child {
-    .page-link {
-      @include border-right-radius($border-radius);
-    }
-  }
+  &:first-child { margin-right: $pagination-padding-x; }
+  &:last-child { margin-left: $pagination-padding-x; }
 
   &.active .page-link {
     z-index: 1;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
     border-color: $pagination-active-border-color;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link (because we assume active pages are not links)
+    cursor: auto;
   }
 
   &.disabled .page-link {
