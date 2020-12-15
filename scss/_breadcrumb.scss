@@ -1,4 +1,11 @@
+$breadcrumb-max-breakpoint-for-mobile-caret: sm;
+$breadcrumb-mobile-caret-width: .4375rem;
+$breadcrumb-mobile-caret-height: .75rem;
+
 .breadcrumb {
+  font-size: $font-size-sm;
+  line-height: $line-height-lg;
+
   display: flex;
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
@@ -9,30 +16,51 @@
 }
 
 .breadcrumb-item {
-  // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item::before {
-    display: inline-block; // Suppress underlining of the separator in modern browsers
-    padding-right: $breadcrumb-item-padding;
-    padding-left: $breadcrumb-item-padding;
-    color: $breadcrumb-divider-color;
-    content: "#{$breadcrumb-divider}";
+  // Hide all breadcrumbs on mobile; show them at breakpoint-next($breadcrumb-max-breakpoint-for-mobile-caret)
+  display: none;
+
+  // On mobile, *do* display the top-level breadcrumb
+  &:first-child {
+    display: list-item;
+
+    // Provide a clickable caret on mobile only
+    @include media-breakpoint-down($breadcrumb-max-breakpoint-for-mobile-caret) {
+      a {
+        @include caret(left);
+
+        // Adjust the caret for this use case
+        &::before {
+          // height and width are "reversed" here because the "left" caret's asset is rotated 90 degrees
+          background-size: $breadcrumb-mobile-caret-height $breadcrumb-mobile-caret-width;
+          height: .625rem;
+        }
+      }
+    }
   }
 
-  // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
-  // without `<ul>`s. The `::before` pseudo-element generates an element
-  // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
-  //
-  // To trick IE into suppressing the underline, we give the pseudo-element an
-  // underline and then immediately remove it.
-  + .breadcrumb-item:hover::before {
-    text-decoration: underline;
-  }
-  // stylelint-disable-next-line no-duplicate-selectors
-  + .breadcrumb-item:hover::before {
-    text-decoration: none;
+  @include media-breakpoint-up(breakpoint-next($breadcrumb-max-breakpoint-for-mobile-caret)) {
+    display: list-item;
+
+    // The separator between breadcrumbs
+    + .breadcrumb-item::before {
+      display: inline-block; // Suppress underlining of the separator in modern browsers
+      padding-right: $breadcrumb-item-padding;
+      padding-left: $breadcrumb-item-padding;
+      color: $breadcrumb-divider-color;
+      content: "#{$breadcrumb-divider}";
+    }
+
+    // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+    // without `<ul>`s. The `::before` pseudo-element generates an element
+    // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+    //
+    // To trick IE into suppressing the underline, we give the pseudo-element an
+    // underline and then immediately remove it.
+    + .breadcrumb-item:hover::before { text-decoration: underline; }
+
+    // stylelint-disable-next-line no-duplicate-selectors
+    + .breadcrumb-item:hover::before { text-decoration: none; }
   }
 
-  &.active {
-    color: $breadcrumb-active-color;
-  }
+  &.active { color: $breadcrumb-active-color; }
 }
